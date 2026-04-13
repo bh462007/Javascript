@@ -41,3 +41,12 @@ arr2 = [...arr1] creates a new copy (new memory), so changes are independent
 
 //Bugs happen when multiple variables point to the same memory location.
 
+const p={x:1};
+const q=p;
+console.log(p);
+console.log(q);
+
+q.x=99;
+console.log(q);
+
+

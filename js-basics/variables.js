@@ -37,3 +37,10 @@ test();
 //error
 //look at the declaration type
 
+
+
+const array=[1,2,3];
+console.log(array);
+
+array.push(4);
+console.log(array);
