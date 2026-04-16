@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter app</title>
+</head>
+
+<body>
+    <h1 id="count">0</h1>
+    <button id="inc">+</button>
+    <button id="dec">-</button>
+    <button id="reset">reset</button>
+    <p id="msg"></p>
+
+    <script>
+        let countEle = document.getElementById("count");
+        let increment = document.getElementById("inc");
+        let decrement = document.getElementById("dec");
+        let reset = document.getElementById("reset");
+        let msg = document.getElementById("msg");
+
+        let count = 0;
+
+        function updateMessage(){
+            if(count==0){
+                msg.innerText="It is zero";
+            }
+            else if(count%2==0){
+                msg.innerText="Even";
+            }
+            else{
+                msg.innerText="Odd";
+            }
+        }
+
+        increment.addEventListener("click", function () {
+            count++;
+            countEle.innerText = count;
+            updateMessage();
+        });
+
+        decrement.addEventListener("click", function () {
+            if (count > 0) {
+                count--;
+                countEle.innerText = count;
+                updateMessage();
+            }
+        });
+
+        reset.addEventListener("click", function () {
+            count = 0;
+            countEle.innerText = count;
+            updateMessage();
+        });
+  
+
+    </script>
+</body>
+
+</html>
