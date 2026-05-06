@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Popup Demo</title>
+</head>
+
+<body>
+
+    <h1>welcome</h1>
+
+    <script>
+
+
+        let name = prompt("Enter your name:");
+
+        if (name === null || name.trim() === "") {
+            alert("Name is required");
+        } else {
+            let ageInput = prompt("Enter your age:");
+
+            let age = Number(ageInput);
+
+            if (ageInput === null || isNaN(age)) {
+                alert("Please enter a valid age");
+            } else {
+                let next = age + 1;
+
+                if (confirm(`Hello ${name}, next year you will be ${next}?`)) {
+                    alert("Confirmed");
+                } else {
+                    alert("Not confirmed");
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
