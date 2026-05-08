@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Counter</title>
+
+    <style>
+        body{
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p{
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Writing that is intended to be edited, such as school papers and rough drafts,
+  uses both blank lines and indentation for separation. In finished works,
+  combining both is considered redundant and amateurish.</p>
+
+  <p id="message">Button clicked 0 times</p>
+
+  <button id="counter">Click</button>
+  
+
+  <script>
+    let count=0;
+    let counter=document.getElementById("counter");
+    let msg=document.getElementById("message");
+
+    counter.addEventListener("click",function(){
+        count++;
+        msg.innerText="Button clicked "+count+" times";
+    });
+
+  </script>
+</body>
+</html>

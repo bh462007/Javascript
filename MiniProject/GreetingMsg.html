@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Message based on time</title>
+
+    <style>
+        body{
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial;
+            background-color: lightyellow;
+        }
+
+        h1{
+            color: darkblue;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Greeting Message based on time</h1>
+    <h1 id="msg"></h1>
+    <script>
+        let curr=new Date();
+        console.log(curr);
+        let hour=curr.getHours;
+
+        if(hour<12){
+            document.getElementById("msg").innerHTML="Good morning";
+        }
+        else if(hour<18){
+            document.getElementById("msg").innerHTML="Good afternoon";
+        }
+        else{
+            document.getElementById("msg").innerHTML="Good night";
+        }
+    </script>
+</body>
+</html>
