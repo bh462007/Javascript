@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color on Button Click</title>
+    <style>
+        button {
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="change">Change color</button>
+
+    <script>
+        let change = document.getElementById("change");
+        const designColors = [
+            "rgb(255, 99, 71)",   // Tomato
+            "hsl(120, 100%, 25%)", // Dark Green
+            "rgba(0, 0, 0, 0.5)"   // Semi-transparent black
+        ];
+
+        let index=0;
+        change.addEventListener("click",function(){
+            document.body.style.backgroundColor = designColors[index];
+            index=(index+1)%designColors.length;
+        })
+    </script>
+</body>
+
+</html>
