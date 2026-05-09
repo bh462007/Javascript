@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial;
+            background-color: lightblue;
+        }
+
+        #dateTime{
+            font-size: 30px;
+            font-weight: bold;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="dateTime"></div>
+
+    <script>
+
+        let current = new Date();
+
+        let day = current.getDate();
+        let month = current.getMonth() + 1;
+        let year = current.getFullYear();
+
+        let hour = current.getHours();
+        let minute = current.getMinutes();
+        let second = current.getSeconds();
+
+        let result =
+            day + "/" +
+            month + "/" +
+            year + " " +
+            hour + ":" +
+            minute + ":" +
+            second;
+
+        document.getElementById("dateTime").innerText = result;
+
+    </script>
+
+</body>
+</html>
